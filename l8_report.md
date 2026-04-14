@@ -86,7 +86,9 @@
 ![Screenshot 8](Screenshots/Task2Step2Screenshot3.png)
 
 - Wireshark TCP flag views for one FIN, one NULL, and one Xmas packet.
-![Screenshot 7](Screenshots/Task2Step2Screenshot1.png)
+![Screenshot 9](Screenshots/Task2Step3Screenshot1.png)
+![Screenshot 10](Screenshots/Task2Step3Screenshot2.png)
+![Screenshot 11](Screenshots/Task2Step3Screenshot3.png)
 
 ---
 
