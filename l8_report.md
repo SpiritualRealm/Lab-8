@@ -13,13 +13,23 @@
 
 ### **Questions**:
 1. How many rules were loaded when Snort started? What does this number tell you about the configuration?
+- Answer: At least 10000 rules were loaded when Snort started. Regardign the configuration, this number of rules processed tells me how much coverage the detection system has with regards to detecting intrusions. The number is way more than a couple thousand, being in the ten thousands, which means that the intrusion detection system covers a broad range of protocols, threats and attack types.
+
 2. Did Snort report any warnings or errors during startup? Explain.
+- Answer: The program did not report any errors or warnings during startup. I know because when I pressed the control key and the "C" key, the program said "Snort exiting" which is a sign that the program works well. In addition, it is able to detect detection attacks run by a virtual machine against another machine.
+
 3. What interface did Snort bind to? Was it the expected one? Why is selecting the correct interface important?
+- Answer: The program binded to the Eth0 interface, which was the expected one. Selecting the correct interface is important because different interfaces see different network traffic. If Snort was binded to the incorrect interface, it might miss network attacks due to not seeing the network traffic because the traffic is on the interface other than the one Snort was binded to.
+
 4. What output mode was used (`alert_fast`, etc.)? Briefly explain differences between modes and appropriate use cases.
+- Answer: 'alert_fast' was used. This output mode returns an alert line quickly. Other output modes like 'full' mode log the alerts with detailed information and is the default mode of snort. 'alert_syslog' logs the alert outputs to a syslog server or system logging system. The difference between modes is based on how they present alert outputs and whether or not the alerts are logged to syslog servers.
 
 ### **Screenshots**:
 - Screenshot of successful Snort startup (`Snort successfully validated the configuration`).
+![Screenshot 1](Screenshots/Task1Step1Screenshot1.png)
+
 - Screenshot of `snort.lua` showing updated `HOME_NET`.
+![Screenshot 2](Screenshots/Task1Step1Screenshot2.png)
 
 ---
 
@@ -27,13 +37,20 @@
 
 ### **Questions**:
 1. What types of scan activity did Snort detect from the Nmap scan? Provide examples.
+- Answer: Snort detected SYN stealth scan activity from the Nmap scan. An example was http_inspect which means the stealth scan was checking for a service.
+
 2. Which ports or protocols were probed by Nmap? Mention a few and their significance.
+- Answer: Ports 21 and 80 were probed by Nmap. Port 80 is the TCP
+
 3. How did promiscuous mode help in detection?
 4. Compare Snort alerts and Wireshark output. What extra insights does Wireshark provide?
 
 ### **Screenshots**:
 - Snort console showing scan-related alerts.
+![Screenshot 3](Screenshots/Task1Step2Screenshot1.png)
+
 - Wireshark packet capture showing SYN scan activity.
+![Screenshot 4](Screenshots/Task1Step2Screenshot2.png)
 
 ---
 
